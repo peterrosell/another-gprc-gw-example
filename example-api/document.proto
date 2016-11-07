@@ -1,17 +1,17 @@
 syntax = "proto3";
-package myapi;
+package example_api;
 
 import "google/api/annotations.proto";
 
 service DocumentService {
  rpc CreateDocument(CreateDocumentRequest) returns (CreateDocumentResponse) {
-   option (google.api.http) = { post: "/document" };
+   option (google.api.http) = { post: "/document" body:"*" };
  }
  rpc ReadDocument(ReadDocumentRequest) returns (ReadDocumentResponse) {
      option (google.api.http) = { get: "/document/{id}" };
  }
  rpc DeleteDocument(DeleteDocumentRequest) returns (DeleteDocumentResponse) {
-     option (google.api.http) = { get: "/document/{id}" };
+     option (google.api.http) = { delete: "/document/{id}" };
  }
  rpc SearchDocument(SearchDocumentRequest) returns (SearchDocumentResponse) {
      option (google.api.http) = { get: "/document" };

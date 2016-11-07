@@ -9,7 +9,7 @@ import (
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 
-	"github.com/peterrosell/another-gprc-gw-example/example-api"
+	api "github.com/peterrosell/another-grpc-gw-example/example-api"
 )
 
 var (
@@ -23,7 +23,7 @@ func run() error {
 
 	mux := runtime.NewServeMux()
 	opts := []grpc.DialOption{grpc.WithInsecure()}
-	err := RegisterDocumentServiceHandlerFromEndpoint(ctx, mux, *echoEndpoint, opts)
+	err := api.RegisterDocumentServiceHandlerFromEndpoint(ctx, mux, *echoEndpoint, opts)
 	if err != nil {
 		return err
 	}

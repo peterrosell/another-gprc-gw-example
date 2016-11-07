@@ -4,7 +4,7 @@ import (
 	"net"
 	"github.com/golang/glog"
 
-	"github.com/peterrosell/another-gprc-gw-example/example-impl"
+	impl "github.com/peterrosell/another-grpc-gw-example/example-impl"
 	"google.golang.org/grpc"
 )
 
@@ -15,7 +15,7 @@ func Run() error {
 		return err
 	}
 	s := grpc.NewServer()
-	RegisterDocumentService(s)
+	impl.RegisterDocumentService(s)
 
 	s.Serve(l)
 	return nil

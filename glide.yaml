@@ -1,4 +1,4 @@
-package: github.com/peterrosell/another-gprc-gw-example
+package: github.com/peterrosell/another-grpc-gw-example
 import:
 - package: github.com/golang/glog
 - package: github.com/golang/protobuf
@@ -9,7 +9,6 @@ import:
   subpackages:
   - runtime
   - third_party/googleapis/google/api
-- package: github.com/peterrosell/grpc-gw-example
   subpackages:
   - api
 - package: golang.org/x/net
@@ -17,3 +16,5 @@ import:
   - context
 - package: google.golang.org/grpc
   version: ^1.0.4
+- package: github.com/peterrosell/another-grpc-gw-example/example-api
+  repo: git@github.com:peterrosell/another-grpc-gw-example/example-api
