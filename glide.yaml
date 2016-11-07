@@ -1,0 +1,19 @@
+package: github.com/peterrosell/another-gprc-gw-example
+import:
+- package: github.com/golang/glog
+- package: github.com/golang/protobuf
+  subpackages:
+  - proto
+- package: github.com/grpc-ecosystem/grpc-gateway
+  version: ^1.1.0
+  subpackages:
+  - runtime
+  - third_party/googleapis/google/api
+- package: github.com/peterrosell/grpc-gw-example
+  subpackages:
+  - api
+- package: golang.org/x/net
+  subpackages:
+  - context
+- package: google.golang.org/grpc
+  version: ^1.0.4
